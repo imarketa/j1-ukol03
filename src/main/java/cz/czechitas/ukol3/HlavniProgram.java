@@ -44,14 +44,13 @@ public class HlavniProgram {
         imarketaPocitac.zapniSe();
         System.out.println(imarketaPocitac);
 
-        imarketaPocitac.vytvorSouborOVelikosti2Disku(255_195_746_304L);
-        imarketaPocitac.vytvorSouborOVelikosti2Disku(255_195_746_304L - 100_000_000L);
+        imarketaPocitac.vytvorSouborOVelikosti(255_195_746_304L);
         System.out.println(imarketaPocitac);
-        imarketaPocitac.vymazSouborOVelikosti2Disku(100_000_000L);
-        imarketaPocitac.vytvorSouborOVelikosti2Disku(100_000_001L);
-        imarketaPocitac.vymazSouborOVelikosti2Disku(255_195_746_304L - 100_000_000_000L);
-        imarketaPocitac.vymazSouborOVelikosti2Disku(255_195_746_304L - 100_000_000L);
-        imarketaPocitac.vymazSouborOVelikosti2Disku(255_195_746_304L + 200_000_000L);
+        imarketaPocitac.vymazSouborOVelikosti(255_195_746_304L*2);
+        imarketaPocitac.vytvorSouborOVelikosti2Disku(255_195_746_304L);
+        imarketaPocitac.vymazSouborOVelikosti2Disku(255_195_746_304L - 255_195_746_304L);
+        imarketaPocitac.vymazSouborOVelikosti2Disku(255_195_746_304L - 255_195_746_304L);
+        imarketaPocitac.vymazSouborOVelikosti2Disku(255_195_746_304L + 255_195_746_304L);
         System.out.println(imarketaPocitac);
 
         imarketaPocitac.vypniSe();
