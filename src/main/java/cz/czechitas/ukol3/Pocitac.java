@@ -77,7 +77,7 @@ public class Pocitac {
         }
     }
 
-    public void vymazSouboryOVelikosti(long velikost) {
+    public void vymazSouborOVelikosti(long velikost) {
         if (jeZapnuty) {
             if ((pevnyDisk1.getVyuziteMisto() - velikost) >= 0) {
                 pevnyDisk1.setVyuziteMisto(pevnyDisk1.getVyuziteMisto() - velikost);
