@@ -36,7 +36,7 @@ public class Pocitac {
     public void vymazSouborOVelikosti2Disku(long velikost) {
         if (jeZapnuty) {
             if ((pevnyDisk1.getVyuziteMisto() - velikost) >= 0) {
-                pevnyDisk1.setVyuziteMisto(pevnyDisk2.getVyuziteMisto() - velikost);
+                pevnyDisk1.setVyuziteMisto(pevnyDisk1.getVyuziteMisto() - velikost);
                 System.out.println("Volné místo pevného disku 1: " + (pevnyDisk1.getKapacitaDisku() - pevnyDisk1.getVyuziteMisto()));
             } else if ((pevnyDisk2.getVyuziteMisto() - velikost) >= 0) {
                 pevnyDisk2.setVyuziteMisto(pevnyDisk2.getVyuziteMisto() - velikost);
@@ -58,17 +58,17 @@ public class Pocitac {
 
             if(volneMistoNaDisku1 >= velikost) {
                 pevnyDisk1.setVyuziteMisto(pevnyDisk1.getVyuziteMisto() + velikost);
-                System.out.println("Vytvoril se soubor o velikosti " + velikost + ". Na disku 1 je vyuzite misto " + pevnyDisk1.getVyuziteMisto() + " bajtu z celkove kapacity " + pevnyDisk1.getKapacitaDisku() + " bajtu.");
+                System.out.println("Vytvořil se soubor o velikosti " + velikost + ". Na disku 1 je využité místo " + pevnyDisk1.getVyuziteMisto() + " bajtů z celkové kapacity " + pevnyDisk1.getKapacitaDisku() + " bajtů.");
             }
 
             else if(volneMistoNaDisku2 >= velikost){
                 System.out.println("Na disku 1 neni dost mista. Soubor se zapise na disk 2.");
                 pevnyDisk2.setVyuziteMisto(pevnyDisk2.getVyuziteMisto() + velikost);
-                System.out.println("Vytvořil se soubor o velikosti " + velikost + ". Na disku 2 je využité místo. " + pevnyDisk2.getVyuziteMisto() + " bajtu z celkove kapacity " + pevnyDisk2.getKapacitaDisku() + " bajtu.");
+                System.out.println("Vytvořil se soubor o velikosti " + velikost + ". Na disku 2 je využité místo. " + pevnyDisk2.getVyuziteMisto() + " bajtů z celkové kapacity " + pevnyDisk2.getKapacitaDisku() + " bajtů.");
             }
 
             else {
-                System.err.println("Na discích neni dostatek místa.");
+                System.err.println("Na discích není dostatek místa.");
             }
         }
 
