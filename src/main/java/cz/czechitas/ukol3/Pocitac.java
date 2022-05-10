@@ -81,9 +81,9 @@ public class Pocitac {
         if (jeZapnuty) {
             if ((pevnyDisk1.getVyuziteMisto() - velikost) >= 0) {
                 pevnyDisk1.setVyuziteMisto(pevnyDisk1.getVyuziteMisto() - velikost);
-                System.out.println("Volné místo na disku 1: " + (pevnyDisk1.getKapacitaDisku() - pevnyDisk1.getVyuziteMisto()));
+                System.out.println("Volné místo na pevném disku 1: " + (pevnyDisk1.getKapacitaDisku() - pevnyDisk1.getVyuziteMisto()));
             } else {
-                System.out.println("Disk 1 je prázdný.");
+                System.out.println("Pevný disk 1 je prázdný.");
                 pevnyDisk1.setVyuziteMisto(0);
             }
 
