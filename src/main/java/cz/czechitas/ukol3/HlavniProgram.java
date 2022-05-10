@@ -49,9 +49,7 @@ public class HlavniProgram {
         //Pevný disk 1 je prázdný.
 
         imarketaPocitac.vytvorSouborOVelikosti2Disku(255_195_746_304L);
-        imarketaPocitac.vymazSouborOVelikosti2Disku(255_195_746_304L - 50_000_000_000L);
-        imarketaPocitac.vymazSouborOVelikosti2Disku(255_195_746_304L - 100_000_000_000L);
-        imarketaPocitac.vymazSouborOVelikosti2Disku(255_195_746_304L + 255_195_746_304L);
+        imarketaPocitac.vymazSouborOVelikosti2Disku(255_195_746_304L);
         System.out.println(imarketaPocitac);
 
         imarketaPocitac.vypniSe();
