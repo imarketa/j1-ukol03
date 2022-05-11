@@ -11,7 +11,7 @@ public class Pocitac {
         return pevnyDisk2;
     }
 
-    public void setDisk2(Disk disk2) {
+    public void setPevnyDisk2(Disk disk2) {
         this.pevnyDisk2 = disk2;
     }
 
@@ -52,27 +52,21 @@ public class Pocitac {
     }
 
     public void vytvorSouborOVelikosti(long velikost) {
-        if (jeZapnuty){
+        if (jeZapnuty) {
             long volneMistoNaDisku1 = pevnyDisk1.getKapacitaDisku() - pevnyDisk1.getVyuziteMisto();
             long volneMistoNaDisku2 = pevnyDisk2.getKapacitaDisku() - pevnyDisk2.getVyuziteMisto();
 
-            if(volneMistoNaDisku1 >= velikost) {
+            if (volneMistoNaDisku1 >= velikost) {
                 pevnyDisk1.setVyuziteMisto(pevnyDisk1.getVyuziteMisto() + velikost);
                 System.out.println("Vytvořil se soubor o velikosti " + velikost + ". Na disku 1 je využité místo " + pevnyDisk1.getVyuziteMisto() + " bajtů z celkové kapacity " + pevnyDisk1.getKapacitaDisku() + " bajtů.");
-            }
-
-            else if(volneMistoNaDisku2 >= velikost){
+            } else if (volneMistoNaDisku2 >= velikost) {
                 System.out.println("Na disku 1 neni dost mista. Soubor se zapise na disk 2.");
                 pevnyDisk2.setVyuziteMisto(pevnyDisk2.getVyuziteMisto() + velikost);
                 System.out.println("Vytvořil se soubor o velikosti " + velikost + ". Na disku 2 je využité místo. " + pevnyDisk2.getVyuziteMisto() + " bajtů z celkové kapacity " + pevnyDisk2.getKapacitaDisku() + " bajtů.");
-            }
-
-            else {
+            } else {
                 System.err.println("Na discích není dostatek místa.");
             }
-        }
-
-        else {
+        } else {
             System.err.println("Počítač je vypnutý, nemohu vytvářet soubory!");
         }
     }
@@ -83,7 +77,7 @@ public class Pocitac {
                 pevnyDisk1.setVyuziteMisto(pevnyDisk1.getVyuziteMisto() - velikost);
                 System.out.println("Volné místo na pevném disku 1: " + (pevnyDisk1.getKapacitaDisku() - pevnyDisk1.getVyuziteMisto()));
             } else {
-                System.out.println("Pevný disk 1 je prázdný.");
+                System.out.println("Pevný disk 1 je plný.");
                 pevnyDisk1.setVyuziteMisto(0);
             }
 

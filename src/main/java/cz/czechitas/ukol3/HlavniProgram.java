@@ -17,21 +17,21 @@ public class HlavniProgram {
         //"Počítač nemůže nastartovat, zkontrolujte jednotlivé komponenty např. paměť a oba disky."
 
         Procesor imarketaProcesor = new Procesor();
-        imarketaProcesor.setRychlost(3_400_000_000_00L);
-        imarketaProcesor.setVyrobce("Dell");
+        imarketaProcesor.setRychlost(1000L);
+        imarketaProcesor.setVyrobce("Intel");
 
         Pamet imarketaPamet = new Pamet();
-        imarketaPamet.setKapacita(16_000_000_000L);
+        imarketaPamet.setKapacita(1000L);
 
         Disk imarketaDisk1 = new Disk();
-        imarketaDisk1.setKapacitaDisku(255_195_746_304L);
+        imarketaDisk1.setKapacitaDisku(1000L);
         Disk imarketaDisk2 = new Disk();
-        imarketaDisk2.setKapacitaDisku(255_195_746_304L);
+        imarketaDisk2.setKapacitaDisku(1000L);
 
         imarketaPocitac.setCpu(imarketaProcesor);
         imarketaPocitac.setRam(imarketaPamet);
         imarketaPocitac.setPevnyDisk1(imarketaDisk1);
-        imarketaPocitac.setDisk2(imarketaDisk2);
+        imarketaPocitac.setPevnyDisk2(imarketaDisk2);
 
         System.out.println(imarketaDisk1);
         System.out.println(imarketaDisk2);
@@ -44,12 +44,12 @@ public class HlavniProgram {
         imarketaPocitac.zapniSe();
         System.out.println(imarketaPocitac);
 
-        imarketaPocitac.vytvorSouborOVelikosti(255_195_746_304L);
-        imarketaPocitac.vymazSouborOVelikosti(255_195_746_304L * 2);
         //Pevný disk 1 je prázdný.
+        imarketaPocitac.vytvorSouborOVelikosti(1000L);
+        imarketaPocitac.vymazSouborOVelikosti(1000*2);
 
-        imarketaPocitac.vytvorSouborOVelikosti2Disku(255_195_746_304L);
-        imarketaPocitac.vymazSouborOVelikosti2Disku(255_195_746_304L);
+        imarketaPocitac.vytvorSouborOVelikosti2Disku(1000L);
+        imarketaPocitac.vymazSouborOVelikosti2Disku(1000L);
         System.out.println(imarketaPocitac);
 
         imarketaPocitac.vypniSe();
